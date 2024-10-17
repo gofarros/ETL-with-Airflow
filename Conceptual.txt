@@ -1,0 +1,21 @@
+1. Apa yang dimaksud dengan NoSQL?
+- NoSQL atau (Not Only SQL) adalah jenis database untuk data tidak terstruktur dan semi-terstruktur. NoSQL tidak menggunakan tabel dengan ketentuan baku/tetap, lebih fleksibel, data tidak harus sama formatnya, bisa handle dokumen, JSON, dll. NoSQL cenderung lebih bisa menangani data yang besar skalanya.
+
+2. Kapan harus menggunakan NoSQL dan Relational Database Management System?
+- NoSQL: Digunakan ketika membutuhkan fleksibilitas dalam skema data, menangani volume data besar, seperti dalam aplikasi web besar atau sistem real-time. Data yang disimpan tidak terstruktur / semi-terstruktur, seperti data dokumen atau data dengan format JSON.
+- RDBMS: Digunakan ketika data yang dikelola memiliki hubungan yang kompleks dan baku, keluar-masuk data lebih konsisten, misal data pembukuan keuangan/perbankan.
+
+3. Contoh 2 tools/platform NoSQL selain ElasticSearch dan keunggulan masing-masing:
+- MongoDB: Keunggulan utama MongoDB adalah dapat menciptakan format Binary JSON (BSON) untuk mendukung lebih banyak tipe data daripada JSON. Format BSON memungkinkan penguraian data yang lebih cepat. Data yang disimpan dalam BSON dapat dicari dan diindeks, sehingga meningkatkan kinerja secara signifikan.
+- Cassandra: Keunggulan Cassandra terletak pada kemampuannya untuk menangani volume data yang sangat besar dengan kecepatan tinggi dan pendistribusian data yang mudah. Arsitektur tanpa master dan latensi rendah, dapat bertahan dari pemadaman pusat data secara keseluruhan tanpa kehilangan data. Fokus pada kualitas untuk memastikan keandalan dan stabilitas.
+
+4. Apa itu Airflow?
+- Airflow adalah tools open-source untuk mengatur, menjadwalkan, dan memonitor alur kerja atau pipeline data. Airflow diatur dengan DAG (Directed Acyclic Graph), yang mengurutkan tugas apa yang harus dilakukan sekuensial dengan code python. Sehingga bisa otomasi berbagai keperluan data prosesing ETL (Extract, Transform, Load) atau otomatisasi alur kerja lainnya. Memudahkan juga tampilan untuk mengontrol alur kerja yang kompleks.
+
+5. Great Expectations
+- Great Expectations (GX) adalah sebuah framework untuk validasi data. GX melakukan pengecekan kualitas dan konsistensi data. Dengan penggunaan GX, kita dapat memastikan bahwa data yang diproses sudah sesuai dengan ekspektasi kita sehingga data dapat dipercaya/valid.
+
+6. Batch Processing (Definisi, Contoh Kasus Penggunaan, Tools, dll)!
+- Batch Processing adalah metode pemrosesan data di mana kumpulan data (batch) diproses bersamaan sekaligus. 
+- Contoh kasus yaitu pemrosesan laporan bulanan, penggajian, dll. 
+- Salah satu tools untuk melakukan batch processing adalah Apache Spark, yang memungkinkan pemrosesan batch yang cepat, terstruktur, dan Toleransi Terhadap Kesalahan. Dengan PySpark kita dapat menjalankan aplikasi secara paralel pada kluster terdistribusi (beberapa node). Dasar dari Spark adalah Resilient Distributed Dataset (RDD) yang tahan terhadap kesalahan dan tidak dapat diubah (Immutabile), dan dapat diproses secara paralel.
